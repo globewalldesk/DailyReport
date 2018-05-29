@@ -1,1 +1,10 @@
 <h1>Daily Report!</h1>
+<div class='col-md-8'>
+  <% if @reports.any? %>
+    <h3>Reports</h3>
+      <ul class="reports">
+        <%= render @reports %>
+      </ul>
+      <%= will_paginate @reports %>
+  <% end %>
+</div>
